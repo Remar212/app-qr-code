@@ -1,8 +1,6 @@
 <?php
 namespace Wecreative\AppQrCodeAPI\Exception;
 
-use GuzzleHttp\Psr7\Response as Response;
-
 class InvalidRequestException extends AppQrCodeException {
     /**
      * @var string
@@ -20,11 +18,11 @@ class InvalidRequestException extends AppQrCodeException {
     protected $requestData;
 
     /**
-     * @var Response
+     * @var $response
      */
     protected $response;
 
-    public function __construct( $requestMethod, $requestUrl, array $requestData, Response $response ) {
+    public function __construct( $requestMethod, $requestUrl, array $requestData, $response ) {
         $this->requestMethod = $requestMethod;
         $this->requestUrl = $requestUrl;
         $this->requestData = $requestData;
