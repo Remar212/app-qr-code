@@ -1,0 +1,21 @@
+{
+    "name": "wecreative/app-qr-code",
+    "description": "App Qr Code API",
+    "type": "library",
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Wecreative\\AppQrCodeAPI\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Damian Remarczyk",
+            "email": "damian.remarczyk@netinteractive.pl"
+        }
+    ],
+    "minimum-stability": "stable"
+}
