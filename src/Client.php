@@ -48,7 +48,7 @@ class Client {
     }
 
     /**
-     * Send GET request to SalesManago API.
+     * Send GET request to AppQrCode API.
      *
      * @param  string $method API Method
      * @param  array  $data   Request data
