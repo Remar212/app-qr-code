@@ -2,6 +2,7 @@
     "name": "wecreative/app-qr-code",
     "description": "App Qr Code API",
     "type": "library",
+    "version": "1.0.5",
     "require": {
         "php": ">=7.0.0"
     },

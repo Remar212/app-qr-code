@@ -3,3 +3,5 @@ composer.phar
 vendor/
 .DS_STORE
 *.DS_Store
+src/qr-codes/
+.vscode/

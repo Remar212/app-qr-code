@@ -35,6 +35,13 @@ class AppQrCode {
 
         if ( $response ) {
             $fileFormat = isset( $data['image_format'] ) ? strtolower( $data['image_format'] ) : 'svg';
+
+            if ( $fileFormat == 'svg' ) {
+                $response = $this->fixSvg( $response );
+            }
+
+            print_r($response);
+
             $save = $this->save( $response, $qrCodeId . '.' . $fileFormat );
 
             if ( $save ) {
@@ -66,6 +73,15 @@ class AppQrCode {
             $this->imagesDirectory . '/' . $file,
             $content
         );
+    }
+
+    public function fixSvg( $svg ) {
+        $fixedSvg = preg_replace( '/<svg[^>]*>/', '', $svg, 1 );
+        $fixedSvg = str_replace( '</svg>', '', $fixedSvg );
+        
+        $correctedSvg = $fixedSvg . '</svg>';
+        
+        return $correctedSvg;
     }
 
     public function delete( $qrCode ) {
