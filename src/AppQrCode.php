@@ -40,8 +40,6 @@ class AppQrCode {
                 $response = $this->fixSvg( $response );
             }
 
-            print_r($response);
-
             $save = $this->save( $response, $qrCodeId . '.' . $fileFormat );
 
             if ( $save ) {
